@@ -1,0 +1,19 @@
+
+// top button
+.btn-top {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin-left: 600px;
+    opacity: 0;
+    transition: 1s;
+    z-index: 10;
+
+    &.active {
+        opacity: 1;
+        bottom: 98px;
+    }
+}

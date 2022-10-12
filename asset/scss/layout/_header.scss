@@ -1,0 +1,211 @@
+.header{
+
+    .group-flex1 {
+        @include flex('jcsb');
+    }
+    .logo {
+        a {
+            display: block;
+            width: 105px;
+            height: 27px;
+            margin-top: 8px;
+            background-position: -5px -165px;
+        }
+    }
+
+    .gnb {
+        margin-left: 70px;
+        margin-right: auto;
+
+        .menu {
+            @include flex('jcac');
+            width: 100%;
+            height: 48px;
+
+            >li+li {
+                margin-left: 20px;
+            }
+
+            li {
+                a {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 48px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    .utill-area {
+        @include flex('jcac');
+
+        li {
+            padding: 0 10px;
+
+            a {
+                display: block;
+                height: 48px;
+                line-height: 48px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .group-flex2 {
+        position: relative;
+        background: #fff;
+        height: 120px;
+        position: relative;
+        @include flex('jcac');
+    }
+
+    .slogan-area {
+        background: url(../images/seoul-slogan.png) no-repeat 0 0;
+        width: 133px;
+        height: 51px;
+
+        a {
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    .search-area {
+        position: absolute;
+        left: 50%;
+        top: 40px;
+        margin-left: -326px;
+        margin-top: 0;
+        box-sizing: border-box;
+
+        fieldset {
+            border: 0;
+        }
+
+        .wrap {
+            position: relative;
+            height: 38px;
+            width: 520px;
+            height: 42px;
+            border: 3px solid #2292e9;
+
+            .input-text {
+                width: calc(100% - 42px);
+                height: 36px;
+                border: 0;
+                padding: 0 10px;
+                line-height: 36px;
+                font-size: 16px;
+                outline: 0;
+
+                &::placeholder {
+                    color: #2292e9;
+                    font-size: 14px;
+                }
+
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 29px;
+                height: 16px;
+                top: 11px;
+                right: 42px;
+                background-image: url(../images/keyboard.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+
+            .btn-submit {
+                position: absolute;
+                right: 0;
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                padding: 0;
+                background-position: -32px -97px;
+            }
+        }
+
+    }
+
+    .language-area {
+        width: 110px;
+        height: 21px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+
+        #langList {
+            width: 80px;
+            height: 21px;
+            border-color: #afcfea;
+            color: #1E6CB3;
+            font-size: 12px;
+            padding: 0 0 0 2px;
+            box-sizing: border-box;
+            line-height: 21px;
+        }
+
+        .go-btn {
+            width: 30px;
+            font-size: 11px;
+            color: #fff;
+            background-color: #1E6CB3;
+            border: 0;
+            height: 21px;
+            /* margin-left: -1px; */
+            display: inline-block;
+            padding: 0;
+        }
+    }
+
+    .weather-area {
+        width: 260px;
+        height: 85px;
+        margin-top: 34px;
+        // vertical-align: top;
+        // text-align: right;
+        display: flex;
+
+        .image-box {
+            margin-top: 4px;
+            margin-left: 3px;
+        }
+
+        .txt-box {
+            display: flex;
+            flex-direction: column;
+            max-width: 242px;
+            margin-left: 5px;
+            margin-top: 5px;
+            .weather {
+                .deg {
+                    font-size: 25px;
+                    margin-right: 5px;
+                }
+
+                span {
+                    font-size: 16px;
+                    letter-spacing: -0.1em;
+                }
+            }
+
+            .dust {
+                margin-top: 7px;
+
+                span {
+                    font-size: 13px;
+                    letter-spacing: -1px;
+                }
+            }
+        }
+    }
+}

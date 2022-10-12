@@ -1,0 +1,47 @@
+ @mixin position($position:null) {
+    position: absolute;
+    @if($position=='ct'){
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if($position=='vt'){
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @else {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin ellip {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+}
+
+@mixin ellipsis($line,$lineHeight) {
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    line-height: $lineHeight; 
+    max-height: $lineHeight*$line; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: $line; 
+    display: -webkit-box; 
+}
+
+@mixin flex($flex:null) {
+    display: flex;
+    @if($flex=='jcac'){
+        justify-content: space-between;
+        align-items: center;
+    }
+    @else if($flex=='jcsb'){
+        justify-content: space-between;
+    }
+    @else {
+        justify-content: center;
+    }
+}
